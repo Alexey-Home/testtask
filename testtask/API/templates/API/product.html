@@ -1,0 +1,10 @@
+{% extends 'API/base.html' %}
+
+{% block content %}
+{% for video in content %}
+    <a href="{% url 'video' video.pk %}"><p>Название: {{ video.title }}</p></a>
+        <video controls playsinline="" loop="loop" muted="muted" preload="auto" width="800" height="600">
+            <source src = "{{ video.link }}" type="video/mp4"></video>
+        <p>Длительность: {{ object.duration }}</p>
+{% endfor %}
+{% endblock %}

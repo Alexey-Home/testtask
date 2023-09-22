@@ -1,0 +1,8 @@
+{% extends 'API/base.html' %}
+
+{% block content %}
+<p>Название: {{ object.title }}</p>
+<video controls playsinline="" loop="loop" muted="muted" preload="auto" width="1024" height="768">
+<source src = "{{ object.link }}" type="video/mp4"></video>
+<p>Длительность: {{ object.duration }}</p>
+{% endblock %}
